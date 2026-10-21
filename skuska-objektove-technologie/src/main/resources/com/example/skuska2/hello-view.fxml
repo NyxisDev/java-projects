@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="982.0" prefWidth="1512.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.skuska2.HelloController">
+   <children>
+      <TableView fx:id="assets" layoutX="14.0" layoutY="14.0" prefHeight="518.0" prefWidth="634.0">
+        <columns>
+          <TableColumn fx:id="inventoryNumberCol" prefWidth="110.39999103546143" text="inventory number" />
+          <TableColumn fx:id="statusCol" prefWidth="124.0" text="status" />
+            <TableColumn fx:id="typeCol" prefWidth="109.59999084472656" text="type" />
+            <TableColumn fx:id="roomCol" prefWidth="75.0" text="room" />
+            <TableColumn fx:id="employeeCol" prefWidth="214.0" text="employee" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="inputStatus" layoutX="665.0" layoutY="167.0" prefWidth="150.0" />
+      <ComboBox fx:id="inputType" layoutX="665.0" layoutY="216.0" prefWidth="150.0" />
+      <ComboBox fx:id="inputRoom" layoutX="665.0" layoutY="267.0" prefWidth="150.0" />
+      <ComboBox fx:id="inputEmployee" layoutX="665.0" layoutY="317.0" prefWidth="150.0" />
+      <TextField fx:id="inputInventoryNumber" layoutX="666.0" layoutY="117.0" />
+      <Text layoutX="669.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory number:" />
+      <Text layoutX="665.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+      <Text layoutX="665.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" />
+      <Text layoutX="665.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" />
+      <Text layoutX="665.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee:" />
+      <Button layoutX="665.0" layoutY="360.0" mnemonicParsing="false" onAction="#addAsset" prefHeight="25.0" prefWidth="150.0" text="Add" />
+      <Button layoutX="666.0" layoutY="395.0" mnemonicParsing="false" onAction="#deleteAsset" prefHeight="25.0" prefWidth="149.0" text="Delete" />
+      <Button layoutX="666.0" layoutY="429.0" mnemonicParsing="false" onAction="#updateAsset" prefHeight="25.0" prefWidth="149.0" text="Update" />
+      <Button layoutX="666.0" layoutY="467.0" mnemonicParsing="false" onAction="#confirmAsset" prefHeight="25.0" prefWidth="149.0" text="Confirm" />
+      <TextField fx:id="newType" layoutX="14.0" layoutY="541.0" prefHeight="25.0" prefWidth="300.0" promptText="New type" />
+      <TextField fx:id="newEmployee" layoutX="348.0" layoutY="541.0" prefHeight="25.0" prefWidth="300.0" promptText="New employee" />
+      <Button layoutX="14.0" layoutY="574.0" mnemonicParsing="false" onAction="#addType" prefHeight="25.0" prefWidth="300.0" text="Add type" />
+      <Button layoutX="348.0" layoutY="574.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="25.0" prefWidth="300.0" text="Add employee" />
+      <TableView fx:id="roomsTable" layoutX="14.0" layoutY="610.0" prefHeight="362.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="numberCol" prefWidth="147.99999713897705" text="number" />
+          <TableColumn fx:id="areaCol" prefWidth="151.99998474121094" text="area " />
+        </columns>
+      </TableView>
+      <TextField fx:id="inputNumber" layoutX="348.0" layoutY="677.0" prefHeight="25.0" prefWidth="300.0" />
+      <TextField fx:id="inputArea" layoutX="348.0" layoutY="725.0" prefHeight="25.0" prefWidth="300.0" />
+      <Text layoutX="348.0" layoutY="673.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number:" />
+      <Text layoutX="348.0" layoutY="721.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Area:" />
+      <Button layoutX="349.0" layoutY="766.0" mnemonicParsing="false" onAction="#addRoom" prefHeight="25.0" prefWidth="300.0" text="Add" />
+      <TableView fx:id="services" layoutX="876.0" layoutY="12.0" prefHeight="959.0" prefWidth="566.0">
+        <columns>
+          <TableColumn fx:id="invNumberCol" prefWidth="209.60003662109375" text="inventory number" />
+          <TableColumn fx:id="serviceDateCol" minWidth="0.0" prefWidth="147.9998779296875" text="service date" />
+            <TableColumn fx:id="serviceSuccessCol" prefWidth="206.800048828125" text="service success" />
+        </columns>
+      </TableView>
+      <Button layoutX="665.0" layoutY="507.0" mnemonicParsing="false" onAction="#goService" prefHeight="25.0" prefWidth="149.0" text="Service" />
+      <Button layoutX="654.0" layoutY="911.0" mnemonicParsing="false" onAction="#exportAssetsToCSV" prefHeight="47.0" prefWidth="172.0" text="export to csv" />
+      <ComboBox fx:id="filterCombo" layoutX="666.0" layoutY="14.0" prefWidth="150.0" />
+      <Button layoutX="666.0" layoutY="48.0" mnemonicParsing="false" onAction="#onFilter" prefHeight="25.0" prefWidth="149.0" text="filter" />
+   </children>
+</Pane>

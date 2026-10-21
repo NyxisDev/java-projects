@@ -1,0 +1,8 @@
+Inventory,Status,Type,Room,Employee
+INV-001,IN_USE,Laptop,101,Ivan Ivanov
+INV-003,AVAILABLE,Printer,101,Ivan Ivanov
+INV-002,AVAILABLE,Laptop,102,Maria Novak
+INV-005,IN_USE,Projector,202,Maria Novak
+INV-008,DISCARDED,Laptop,102,Maria Novak
+INV-007,IN_USE,Tablet,201,Peter Horvath
+INV-006,AVAILABLE,Router,301,Anna Kovacova
