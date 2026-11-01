@@ -49,10 +49,9 @@ A JavaFX desktop app for tracking company assets, with data stored in a MySQL da
 
 **Run it**
 1. Start MySQL, for example through XAMPP, on `localhost:3306`.
-2. Create a database named `skuska2.2` with the required tables. The schema is not included in this repository.
-3. Add the MySQL Connector/J driver to the project.
-4. Check the database username and password in `HelloController.java`.
-5. Run the app with `mvn javafx:run`.
+2. Import `schema.sql` from the project folder, which creates the `skuska2.2` database with sample data. The original schema was not saved, so this file is reconstructed from the application's SQL queries.
+3. Check the database username and password in `HelloController.java`.
+4. Run the app with `mvn javafx:run`.
 
 ## Author
 
